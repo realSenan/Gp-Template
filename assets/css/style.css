@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
-  max-width: 83.75rem;
+  max-width: 1340px;
+  width: 100%;
   margin: auto;
   padding: 14px;
 }
@@ -15,7 +20,6 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(2, 3, 3, 0.8274509804);
 }
 .header nav {
   display: flex;
@@ -85,6 +89,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .text-area {
@@ -111,6 +116,7 @@ body {
 }
 
 .card-wrapper {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -124,7 +130,7 @@ body {
   flex-direction: column;
   padding: 0 10px;
   gap: 10px;
-  width: 200px;
+  width: 100%;
   height: 160px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: 0.3s;
@@ -148,7 +154,34 @@ body {
 }
 
 .section-2 {
+  margin-top: 60px;
   min-height: 100vh;
+}
+.section-2 .row {
+  display: flex !important;
+  gap: 12px;
+}
+.section-2 .left h3 {
+  font-size: 28px;
+  margin-bottom: 5px;
+  line-height: 1.1;
+}
+.section-2 .left .list {
+  margin: 15px 0 10px 0;
+  margin-left: 30px;
+}
+.section-2 .left li {
+  list-style-image: url("/assets/img/icon/icons8-check.svg");
+}
+.section-2 .right {
+  flex-basis: 100%;
+}
+.section-2 .right img {
+  max-width: 640px;
+  min-width: 456px;
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
 }
 
 @media (max-width: 1200px) {
@@ -171,6 +204,15 @@ body {
   .center {
     display: none;
   }
+  .section-2 .row {
+    flex-direction: column-reverse !important;
+  }
+  .section-2 .row .right img {
+    max-width: 100% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+  }
 }
 @media (max-width: 769px) {
   .container {
@@ -187,6 +229,7 @@ body {
   }
   .section-1 .text-area p {
     font-size: 20px;
+    text-align: center;
   }
 }
 
