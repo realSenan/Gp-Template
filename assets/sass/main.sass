@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap')
+
+.container
+    max-width: 83.75rem
+    margin: auto
+    padding: 14px
+
+body
+    font-family: "Open Sans", sans-serif
+    // font-family: 'Raleway', sans-serif
+    color: #444444
+
+.header
+    width: 100%
+    position: fixed
+    top: 0
+    left: 0
+    background-color: #3333336b
+    nav
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .logo
+            h1
+                a
+                    font-size: 34px
+                    color: #fff
+                    font-family: 'Raleway', sans-serif
+                    span
+                        color: yellow
+        .right
+            display: flex
+            align-items: center
+            gap: 10px
+            a
+                display: inline-block
+                justify-content: center
+                align-items: center
+                min-width: max-content
+                padding: 8px 26px
+                border: 2px solid #fcbd29
+                border-radius: 5px
+                color: #fff
+                transition: 0.2s
+                font-size: 15px
+            a:hover
+                background-color: #fcbd29
+                color: #000
+            .bars
+                display: none
+                li
+                    height: 2px
+                    width: 25px
+                    font-size: 1.5rem
+                    background-color: #fff
+                    margin-bottom: 7px
+        .center
+            .menu-list
+                display: flex
+                justify-content: center
+                gap: 18px
+                a
+                    display: block
+                    color: #fff
+                    font-weight: 600
+                    transition: 0.3s
+                a.active
+                    color: #fcbd29
+                a:hover
+                    color: #fac04f
+
+.section-1
+    height: 100vh
+    background: linear-gradient(rgba(0,0, 0, 0.7), rgba(0,0, 0, 0.5)) ,url("/assets/img/hero-bg.jpg") no-repeat fixed center/cover
+    display: flex
+    align-items: center
+    justify-content: center
+
+.text-area
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    h2
+        font-size: 62px
+        color: #fff
+        max-width: 600px
+        text-align: center
+        line-height: 1
+        span
+            color: #fac04f
+    p
+        margin-top: 15px
+        font-size: 25px
+        color: #eeeeee
+        font-family: 'Raleway', sans-serif
+
+.card-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 20px
+    margin-top: 60px
+    .card
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        padding: 0 10px
+        gap: 10px
+        width: 100%
+        height: 160px
+        border: 1px solid rgba(255, 255, 255, 0.3)
+        transition: 0.3s
+        i
+            color: #fac04f
+            font-size: 32px
+        a
+            color: #fff
+            font-size: 20px
+            font-weight: bold
+            text-align: center
+            transition: 0.3s
+        a:hover
+            color: #fac04f
+
+    .card:hover
+        border: 1px solid #fac04f
+
+// Meida query
+@media (max-width:1200px)
+    .card-wrapper
+        flex-wrap: wrap
+        justify-content: center
+        .card
+            width: 30%
+            height: 140px
+
+@media (max-width:990px)
+    .bars
+        display: block !important
+    .container
+        max-width: 960px
+    .center
+        display: none
