@@ -15,7 +15,7 @@ body
     position: fixed
     top: 0
     left: 0
-    background-color: #3333336b
+    background-color: #020303d3
     nav
         display: flex
         justify-content: space-between
@@ -69,8 +69,10 @@ body
                 a:hover
                     color: #fac04f
 
+
+// section 1 Start
 .section-1
-    height: 100vh
+    min-height: 100vh
     background: linear-gradient(rgba(0,0, 0, 0.7), rgba(0,0, 0, 0.5)) ,url("/assets/img/hero-bg.jpg") no-repeat fixed center/cover
     display: flex
     align-items: center
@@ -108,7 +110,7 @@ body
         flex-direction: column
         padding: 0 10px
         gap: 10px
-        width: 100%
+        width: 200px
         height: 160px
         border: 1px solid rgba(255, 255, 255, 0.3)
         transition: 0.3s
@@ -126,20 +128,42 @@ body
 
     .card:hover
         border: 1px solid #fac04f
+// section 1 end
+
+// Section 2 start
+.section-2
+    min-height:  100vh
+// Section 2 end
 
 // Meida query
 @media (max-width:1200px)
     .card-wrapper
-        flex-wrap: wrap
+        flex-wrap: wrap !important
         justify-content: center
         .card
-            width: 30%
+            width: 30% !important
             height: 140px
 
 @media (max-width:990px)
-    .bars
-        display: block !important
     .container
         max-width: 960px
+    // Mobile menu bars
+    .bars
+        display: block !important
     .center
         display: none
+
+@media (max-width:769px)
+    .container
+        max-width: 540px
+    
+    .section-1
+        padding-top:  110px
+        .card-wrapper
+            .card
+                width: 100% !important
+        .text-area
+            h2
+                font-size: 28px
+            p
+                font-size: 20px

@@ -15,7 +15,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(51, 51, 51, 0.4196078431);
+  background-color: rgba(2, 3, 3, 0.8274509804);
 }
 .header nav {
   display: flex;
@@ -80,7 +80,7 @@ body {
 }
 
 .section-1 {
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("/assets/img/hero-bg.jpg") no-repeat fixed center/cover;
   display: flex;
   align-items: center;
@@ -124,7 +124,7 @@ body {
   flex-direction: column;
   padding: 0 10px;
   gap: 10px;
-  width: 100%;
+  width: 200px;
   height: 160px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: 0.3s;
@@ -147,25 +147,46 @@ body {
   border: 1px solid #fac04f;
 }
 
+.section-2 {
+  min-height: 100vh;
+}
+
 @media (max-width: 1200px) {
   .card-wrapper {
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
     justify-content: center;
   }
   .card-wrapper .card {
-    width: 30%;
+    width: 30% !important;
     height: 140px;
   }
 }
 @media (max-width: 990px) {
-  .bars {
-    display: block !important;
-  }
   .container {
     max-width: 960px;
   }
+  .bars {
+    display: block !important;
+  }
   .center {
     display: none;
+  }
+}
+@media (max-width: 769px) {
+  .container {
+    max-width: 540px;
+  }
+  .section-1 {
+    padding-top: 110px;
+  }
+  .section-1 .card-wrapper .card {
+    width: 100% !important;
+  }
+  .section-1 .text-area h2 {
+    font-size: 28px;
+  }
+  .section-1 .text-area p {
+    font-size: 20px;
   }
 }
 
