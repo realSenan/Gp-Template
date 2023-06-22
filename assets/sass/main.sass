@@ -61,12 +61,13 @@ body
             .menu-list
                 display: flex
                 justify-content: center
-                gap: 18px
+                gap: 28px
                 a
                     display: block
                     color: #fff
                     font-weight: 600
                     transition: 0.3s
+                    font-size: 15px
                 a.active
                     color: #fcbd29
                 a:hover
@@ -138,6 +139,7 @@ body
 .section-2
     margin-top: 60px
     min-height: 100vh
+    overflow: hidden
     .row
         display: flex !important
         gap: 12px
@@ -159,11 +161,16 @@ body
             width: 100%
             height: 480px
             object-fit: cover
-// Section 2 end
 
-// Slider start
-
+    .carousel
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 50px
+        img
+            width: 120px
 // Slider end
+// Section 2 end
 
 // Meida querys
 @media (max-width:1200px)
@@ -171,7 +178,7 @@ body
         flex-wrap: wrap !important
         justify-content: center
         .card
-            width: 30% !important
+            width: calc( 100% / 4 ) !important
             height: 140px
 
 @media (max-width:990px)
