@@ -20,6 +20,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <!-- Swipper js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <!-- Title -->
     <title>Gp Bootstrap Template | ZODWO</title>
   </head>
@@ -36,15 +41,15 @@
           <!-- nav center -->
           <div class="center">
             <ul class="menu-list">
-              <li><a href="#" class="active">Home</a></li>
+              <li><a href="#home" class="active">Home</a></li>
               <li><a href="#about">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Team</a></li>
+              <li><a href="#service">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#team">Team</a></li>
               <li>
                 <a href="#">Drop Down <i class="fa-solid fa-caret-down"></i></a>
               </li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
           <!-- nav right -->
@@ -61,7 +66,7 @@
     </header>
 
     <main>
-      <section class="section-1">
+      <section id="home" class="section-1">
         <div class="container">
           <div class="text-area">
             <h2>Powerful Digital Solutions With Gp<span>.</span></h2>
@@ -133,30 +138,61 @@
             </div>
           </div>
           <!-- Sldier -->
-          <div class="carousel">
-            <img src="assets/img/clients/client-1.png" />
-            <img src="assets/img/clients/client-2.png" />
-            <img src="assets/img/clients/client-3.png" />
-            <img src="assets/img/clients/client-4.png" />
-            <img src="assets/img/clients/client-5.png" />
-            <img src="assets/img/clients/client-6.png" />
-            <img src="assets/img/clients/client-7.png" />
-            <img src="assets/img/clients/client-8.png" />
-            <img src="assets/img/clients/client-1.png" />
-            <img src="assets/img/clients/client-2.png" />
-            <img src="assets/img/clients/client-3.png" />
-            <img src="assets/img/clients/client-4.png" />
-            <img src="assets/img/clients/client-5.png" />
-            <img src="assets/img/clients/client-6.png" />
-            <img src="assets/img/clients/client-7.png" />
-            <img src="assets/img/clients/client-8.png" />
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="assets/img/clients/client-1.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/client-2.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/client-3.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/client-4.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/client-5.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/client-6.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/client-7.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/client-8.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/client-1.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/client-2.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/client-3.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/client-4.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/clients/client-5.png" />
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
     </main>
 
     <footer></footer>
+    <!-- Slider cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- script -->
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/slider.js"></script>
   </body>
 </html>

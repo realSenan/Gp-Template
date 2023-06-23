@@ -13,6 +13,7 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  overflow-x: hidden;
 }
 
 .header {
@@ -155,9 +156,8 @@ body {
 }
 
 .section-2 {
-  margin-top: 60px;
+  padding-top: 60px;
   min-height: 100vh;
-  overflow: hidden;
 }
 .section-2 .row {
   display: flex !important;
@@ -185,14 +185,36 @@ body {
   height: 480px;
   object-fit: cover;
 }
-.section-2 .carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
+
+.swiper {
+  margin-top: 60px;
+  height: 120px;
 }
-.section-2 .carousel img {
+.swiper img {
   width: 120px;
+  -webkit-filter: grayscale(1) invert(0.5);
+  filter: grayscale(100) invert(0.7);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.swiper img:hover {
+  -webkit-filter: grayscale(0) invert(0);
+  filter: grayscale(0) invert(0);
+}
+.swiper .swiper-slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center !important;
+  width: auto;
+}
+
+.swiper-pagination-bullet {
+  height: 10px !important;
+  width: 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffbb38 !important;
 }
 
 @media (max-width: 1200px) {
@@ -223,6 +245,12 @@ body {
     width: 100% !important;
     min-width: 0 !important;
     height: auto !important;
+  }
+  .swiper {
+    height: 110px;
+  }
+  .swiper img {
+    width: 100px;
   }
 }
 @media (max-width: 769px) {

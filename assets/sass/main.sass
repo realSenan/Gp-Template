@@ -13,6 +13,7 @@ body
     font-family: "Open Sans", sans-serif
     // font-family: 'Raleway', sans-serif
     color: #444444
+    overflow-x: hidden
 
 .header
     width: 100%
@@ -137,24 +138,28 @@ body
 
 // Section 2 start
 .section-2
-    margin-top: 60px
+    padding-top: 60px
     min-height: 100vh
-    overflow: hidden
     .row
         display: flex !important
         gap: 12px
+
     .left
         h3
             font-size: 28px
             margin-bottom: 5px
             line-height: 1.1
+
         .list
             margin: 15px 0 10px 0
             margin-left: 30px
+
         li
             list-style-image: url("/assets/img/icon/icons8-check.svg")
+
     .right
         flex-basis: 100%
+
         img
             max-width: 640px
             min-width: 456px
@@ -162,14 +167,34 @@ body
             height: 480px
             object-fit: cover
 
-    .carousel
+.swiper
+    margin-top: 60px
+    height: 120px
+
+    img
+        width: 120px
+        -webkit-filter: grayscale(1) invert(0.5)
+        filter: grayscale(100) invert(0.7)
+        transition: 0.3s
+        cursor: pointer
+
+    img:hover
+        -webkit-filter: grayscale(0) invert(0)
+        filter: grayscale(0) invert(0)
+
+    .swiper-slide
         display: flex
-        align-items: center
-        justify-content: center
-        gap: 50px
-        img
-            width: 120px
-// Slider end
+        justify-content: space-between
+        align-items: center !important
+        width: auto
+
+.swiper-pagination-bullet
+    height: 10px !important
+    width: 10px !important
+
+.swiper-pagination-bullet-active
+    background-color: #ffbb38 !important
+
 // Section 2 end
 
 // Meida querys
@@ -192,6 +217,7 @@ body
     // section 2 row 
     .section-2
         .row
+
             flex-direction: column-reverse !important
             .right
                 img
@@ -199,6 +225,10 @@ body
                     width: 100% !important
                     min-width: 0 !important
                     height: auto !important
+    .swiper
+        height: 110px
+        img
+            width: 100px
 
 @media (max-width:769px)
     .container
