@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
       rel="stylesheet"
     />
+
     <!-- Reset css -->
     <link rel="stylesheet" href="assets/css/reset.css" />
     <!-- Style css -->
@@ -24,6 +25,13 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
     />
     <!-- Title -->
     <title>Gp Bootstrap Template | ZODWO</title>
@@ -43,7 +51,7 @@
             <ul class="menu-list">
               <li><a href="#home" class="active">Home</a></li>
               <li><a href="#about">About</a></li>
-              <li><a href="#service">Services</a></li>
+              <li><a href="#services">Services</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
               <li><a href="#team">Team</a></li>
               <li>
@@ -73,23 +81,23 @@
             <p>We are team of talented digital marketers</p>
           </div>
           <div class="card-wrapper">
-            <div class="card">
+            <div class="cardm">
               <i class="fa-solid fa-store"></i>
               <a href="">Lorem, ipsum.</a>
             </div>
-            <div class="card">
+            <div class="cardm">
               <i class="fa-solid fa-chart-column"></i>
               <a href="">Dolor Sitema</a>
             </div>
-            <div class="card">
+            <div class="cardm">
               <i class="fa-solid fa-calendar-days"></i>
               <a href="">Sedare Perspiciatis</a>
             </div>
-            <div class="card">
+            <div class="cardm">
               <i class="fa-solid fa-paint-roller"></i>
               <a href="">Magni Dolores</a>
             </div>
-            <div class="card">
+            <div class="cardm">
               <i class="fa-solid fa-database"></i>
               <a href="">Nemos Enimade</a>
             </div>
@@ -99,7 +107,7 @@
 
       <section id="about" class="section-2">
         <div class="container">
-          <div class="row">
+          <div class="rowm">
             <div class="left">
               <h3>
                 Voluptatem dignissimos provident quasi corporis voluptates sit
@@ -132,12 +140,11 @@
                 cupidatat non proident
               </p>
             </div>
-
-            <div class="right">
-              <img src="assets/img/about.jpg" />
+            <div class="rights">
+              <img id="rimg" src="assets/img/about.jpg" />
             </div>
           </div>
-          <!-- Sldier -->
+          <!--! Sldier -->
           <div class="swiper">
             <div class="swiper-wrapper">
               <!-- Slides -->
@@ -184,11 +191,152 @@
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
           </div>
+          <!--! Sldier END-->
+
+          <div class="section-3">
+            <div class="row">
+              <div class="col left"></div>
+              <div class="col right">
+                <div class="cols mx-3 mb-5">
+                  <img src="assets/img/icon/newspaper-regular.svg" />
+                  <div class="right">
+                    <h4>Est labore ad</h4>
+                    <p>
+                      Consequuntur sunt aut quasi enim aliquam quae harum
+                      pariatur laboris nisi ut aliquip
+                    </p>
+                  </div>
+                </div>
+                <div class="cols mx-3 mb-5">
+                  <img src="assets/img/icon/hive.svg" />
+                  <div class="right">
+                    <h4>Harum esse qui</h4>
+                    <p>
+                      Excepteur sint occaecat cupidatat non proident, sunt in
+                      culpa qui officia deserunt
+                    </p>
+                  </div>
+                </div>
+                <div class="cols mx-3 mb-5">
+                  <img src="assets/img/icon/images-solid.svg" />
+                  <div class="right">
+                    <h4>Aut occaecati</h4>
+                    <p>
+                      Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut
+                      maiores omnis facere
+                    </p>
+                  </div>
+                </div>
+                <div class="cols mx-3">
+                  <img src="assets/img/icon/icons8-shield-48.png" />
+                  <div class="right">
+                    <h4>Beatae veritatis</h4>
+                    <p>
+                      Expedita veritatis consequuntur nihil tempore laudantium
+                      vitae denat pacta
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-    </main>
 
+      <section id="services" class="section-4">
+        <div class="container">
+          <div class="head">
+            SERVICES
+            <div class="line"></div>
+          </div>
+          <p id="title">CHECK OUR SERVICES</p>
+
+          <div class="row cwrp">
+            <div class="col-sm-12 mt-3 col-md-6 col-lg-4 cards">
+              <div class="icon-box">
+                <i class="fa-solid fa-basketball"></i>
+                <h4><a href="">Lorem Ipsum</a></h4>
+                <p>
+                  Voluptatum deleniti atque corrupti quos dolores et quas
+                  molestias excepturi
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-12 mt-3 col-md-6 col-lg-4 cards">
+              <div class="icon-box">
+                <i class="fa-solid fa-basketball"></i>
+                <h4><a href="">Lorem Ipsum</a></h4>
+                <p>
+                  Voluptatum deleniti atque corrupti quos dolores et quas
+                  molestias excepturi
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-12 mt-3 col-md-6 col-lg-4 cards">
+              <div class="icon-box">
+                <i class="fa-solid fa-basketball"></i>
+                <h4><a href="">Lorem Ipsum</a></h4>
+                <p>
+                  Voluptatum deleniti atque corrupti quos dolores et quas
+                  molestias excepturi
+                </p>
+              </div>
+            </div>
+
+            <div class="col-sm-12 mt-3 col-md-6 col-lg-4 cards">
+              <div class="icon-box">
+                <i class="fa-solid fa-basketball"></i>
+                <h4><a href="">Lorem Ipsum</a></h4>
+                <p>
+                  Voluptatum deleniti atque corrupti quos dolores et quas
+                  molestias excepturi
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-12 mt-3 col-md-6 col-lg-4 cards">
+              <div class="icon-box">
+                <i class="fa-solid fa-basketball"></i>
+                <h4><a href="">Lorem Ipsum</a></h4>
+                <p>
+                  Voluptatum deleniti atque corrupti quos dolores et quas
+                  molestias excepturi
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-12 mt-3 col-md-6 col-lg-4 cards">
+              <div class="icon-box">
+                <i class="fa-solid fa-basketball"></i>
+                <h4><a href="">Lorem Ipsum</a></h4>
+                <p>
+                  Voluptatum deleniti atque corrupti quos dolores et quas
+                  molestias excepturi
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-footers">
+          <div class="container">
+            <h3>Call To Action</h3>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
+            <a href="" class="btn py-2 px-5"> Call To Action</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section-5"></section>
+
+      <section id="team" class="section-6"></section>
+
+      <section id="contact" class="section-7"></section>
+    </main>
     <footer></footer>
+
     <!-- Slider cdn -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- script -->
