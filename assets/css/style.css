@@ -251,10 +251,7 @@ body {
   height: 800vh;
 }
 
-.section-4 {
-  padding-top: 60px;
-}
-.section-4 .head {
+.head {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -263,14 +260,19 @@ body {
   font-weight: 600;
   letter-spacing: 2px;
 }
-.section-4 .head .line {
+.head .line {
   width: 100px;
   height: 0.4px;
   background-color: #fac04f;
 }
-.section-4 #title {
+
+#title {
   font-size: 36px;
   font-weight: 700;
+}
+
+.section-4 {
+  padding-top: 60px;
 }
 .section-4 .cwrp {
   margin-top: 3.125rem;
@@ -352,6 +354,21 @@ body {
   border-color: #fac04f;
   background: #fac04f;
   color: black;
+}
+
+.section-5 {
+  padding-top: 60px;
+}
+.section-5 .portfolio-flters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.section-5 .portfolio-flters li {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #444445;
 }
 
 @media (max-width: 1200px) {

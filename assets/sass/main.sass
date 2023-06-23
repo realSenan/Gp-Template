@@ -228,23 +228,24 @@ body
 body
     height: 800vh
 
+.head
+    display: flex
+    align-items: center
+    gap: 10px
+    font-size: 14px
+    color: #AAAA
+    font-weight: 600
+    letter-spacing: 2px
+    .line
+        width: 100px
+        height: .4px
+        background-color: #fac04f
+#title
+    font-size: 36px
+    font-weight: 700
+
 .section-4
     padding-top: 60px
-    .head
-        display: flex
-        align-items: center
-        gap: 10px
-        font-size: 14px
-        color: #AAAA
-        font-weight: 600
-        letter-spacing: 2px
-        .line
-            width: 100px
-            height: .4px
-            background-color: #fac04f
-    #title
-        font-size: 36px
-        font-weight: 700
     .cwrp
         margin-top: 3.125rem
         .icon-box
@@ -312,6 +313,19 @@ body
                 border-color: #fac04f
                 background: #fac04f
                 color: black
+
+
+.section-5
+    padding-top: 60px
+    .portfolio-flters
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 10px
+        li
+            text-transform: uppercase
+            font-weight: 700
+            color: #444445
 
 // Meida querys
 @media (max-width:1200px)
