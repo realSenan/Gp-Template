@@ -327,15 +327,96 @@ body
 
 .section-5
     padding-top: 60px
+
     .portfolio-flters
         display: flex
         align-items: center
         justify-content: center
         gap: 10px
+
         li
             text-transform: uppercase
-            font-weight: 700
+            font-weight: 600
             color: #444445
+            padding: 5px 15px
+            border-radius: 5px
+            cursor: pointer
+            transition: 0.4s
+
+        li.active
+            background-color: #fcbd29
+
+        li:hover
+            background-color: #fcbd29
+
+    .portfolio-wrapper
+        transition: all ease-in-out 0.3s
+
+        .portfolio-item
+            flex-shrink: 0 !important
+            position: relative 
+            transition: all ease-in-out 0.3s
+            overflow: hidden
+
+            img
+                
+                width: 100%
+                transition: all ease-in-out 0.3s
+
+            &:hover
+                img
+                    scale: 1.2
+
+                .portfolio-info
+                    opacity: 1 !important
+                    scale: 1.1
+
+            .portfolio-info
+                position: absolute
+                bottom: 0
+                opacity: 0
+                width: 100%
+                height: 100%
+                background: #00000093
+                display: flex
+                flex-direction: column
+                align-items: left
+                justify-content: end
+                padding-left: 24px
+                padding-bottom: 34px
+                transition: 0.4s
+
+                .button-wrapper
+                    margin-top: 10px
+                    display: flex
+                    align-items: center
+                    gap: 15px
+                    a,i
+                        color: #fff
+                        cursor: pointer
+                        transition: 0.3s
+                        &:hover
+                            color: #fcbd29
+                    i
+                        cursor: pointer
+                        font-size: 22px
+                    a
+                        i
+                            font-size: 25px !important
+
+                h4
+                    font-size: 20px
+                    color: #fff
+                    font-weight: 600
+                    font-family: 'Raleway', sans-serif
+
+                p
+                    color: rgba(255, 255, 255, 0.7)
+                    font-size: 14px
+                    text-transform: uppercase
+                    padding: 0
+                    margin: 0
+                    font-style: italic
 
 // Meida querys
 @media (max-width:1200px)
