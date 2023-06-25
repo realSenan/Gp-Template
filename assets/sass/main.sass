@@ -12,24 +12,25 @@ body
     color: #444444
     overflow-x: hidden
 
+.logo
+    h1
+        a
+            font-size: 34px
+            color: #fff
+            font-family: 'Raleway', sans-serif
+            span
+                color: #fcbd29
+
 .header
     width: 100%
     position: fixed
-    top: 0
-    left: 0
+    top: 0 !important
+    left: 0 !important
     z-index: 99999999
     nav
         display: flex
         justify-content: space-between
         align-items: center
-        .logo
-            h1
-                a
-                    font-size: 34px
-                    color: #fff
-                    font-family: 'Raleway', sans-serif
-                    span
-                        color: yellow
         .right
             display: flex
             align-items: center
@@ -61,7 +62,7 @@ body
                 display: flex
                 justify-content: center
                 gap: 28px
-                a
+                a,span
                     display: block
                     color: #fff
                     font-weight: 600
@@ -72,15 +73,77 @@ body
                 a:hover
                     color: #fac04f
 
+.drop-down
+    position: relative
+    font-size: 14px
+    text-transform: none
+    font-weight: 500
+    color: #fff
+    cursor: pointer
+
+    &:hover
+        color: #ffc451 !important
+
+        #x
+            color: #ffc451 !important
+
+        .drop-down-menu
+            top: 37px
+            opacity: 1
+            visibility: visible
+
+.drop-down-menu
+    position: absolute
+    top: 67px
+    background-color: #fff
+    width: 200px
+    padding: 5px 0
+    border-radius: 1px
+    transition: 0.4s cubic-bezier(0.22, 1, 0.36, 1)
+    opacity: 0
+    visibility: hidden
+
+    li
+        a,span
+            position: relative
+            padding: 10px 20px
+            font-size: 14px
+            text-transform: none
+            color: #151515 !important
+            font-weight: 400
+            &:hover
+                background-color: #ffc451
+            i
+                position: absolute
+                font-size: 10px
+                right: 20px
+                top: 17px
+        #l
+            color: #fff !important
+
+    .ci2-drop-down
+        height: 40px !important
+        &:hover
+            #l
+                background-color: #ffc451
+            .deep-drop-down-menu
+                top: 0 !important
+                visibility: visible !important
+                opacity: 1 !important
+
+.deep-drop-down-menu
+    padding: 5px 0
+    position: absolute
+    top: 50 !important
+    left: 200px !important
+    visibility: hidden !important
+    opacity: 0 !important
+    border-left: 1px solid #eeee
+
 // section 1 Start
 .section-1
     min-height: 100vh
-    background: linear-gradient(rgba(0,0, 0, 0.7), rgba(0,0, 0, 0.5)) ,url("/assets/img/hero-bg.jpg") no-repeat fixed center/cover
-    background-attachment: fixed
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
-    background-size: cover
+    background: linear-gradient(rgba(0,0, 0, 0.7), rgba(0,0, 0, 0.5)) ,url("/assets/img/hero-bg.jpg") no-repeat center/cover
     display: flex
     align-items: center
     justify-content: center
@@ -170,20 +233,21 @@ body
             height: 480px
             object-fit: cover
 
-.swiper
-    margin-top: 60px
-    height: 140px
+.section-2
+    .swiper
+        margin-top: 60px
+        height: 140px
 
-    img
-        width: 120px
-        -webkit-filter: grayscale(1) invert(0.5)
-        filter: grayscale(100) invert(0.7)
-        transition: 0.3s
-        cursor: pointer
+        img
+            width: 120px
+            -webkit-filter: grayscale(1) invert(0.5)
+            filter: grayscale(100) invert(0.7)
+            transition: 0.3s
+            cursor: pointer
 
-    img:hover
-        -webkit-filter: grayscale(0) invert(0)
-        filter: grayscale(0) invert(0)
+        img:hover
+            -webkit-filter: grayscale(0) invert(0)
+            filter: grayscale(0) invert(0)
 
     .swiper-slide
         display: flex
@@ -191,12 +255,12 @@ body
         align-items: center !important
         width: auto
 
-.swiper-pagination-bullet
-    height: 10px !important
-    width: 10px !important
+    .swiper-pagination-bullet
+        height: 10px !important
+        width: 10px !important
 
-.swiper-pagination-bullet-active
-    background-color: #ffbb38 !important
+    .swiper-pagination-bullet-active
+        background-color: #ffbb38 !important
 
 .section-3
     padding-top: 60px
@@ -229,9 +293,6 @@ body
                 margin-bottom: 0px
 
 // Section 2 end
-
-body
-    height: 800vh
 
 .head
     display: flex
@@ -293,13 +354,8 @@ body
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
     .section-footers
         margin-top: 60px
-        background: linear-gradient(rgb(0,0,0,0.6),rgb(0,0,0,0.6)),url("/assets/img/cta-bg.jpg") center/cover no-repeat fixed
+        background: linear-gradient(rgb(0,0,0,0.6),rgb(0,0,0,0.6)),url("/assets/img/cta-bg.jpg") center/cover no-repeat
         height: 17.5rem
-        background-attachment: fixed
-        -webkit-background-size: cover
-        -moz-background-size: cover
-        -o-background-size: cover
-        background-size: cover
 
         .container
             display: flex
@@ -328,6 +384,11 @@ body
 .section-5
     padding-top: 60px
 
+    .bigsize
+        font-size: 48px !important
+        position: relative
+        top: -7px
+
     .portfolio-flters
         display: flex
         align-items: center
@@ -350,16 +411,20 @@ body
             background-color: #fcbd29
 
     .portfolio-wrapper
-        transition: all ease-in-out 0.3s
+        transition: all ease-in-out 0.3s !important
+        columns: 3
+        // column-gap: 10px
 
         .portfolio-item
-            flex-shrink: 0 !important
-            position: relative 
+            // flex-shrink: 0 !important
+            margin-bottom: 10px
+            height: min-content
+            position: relative
             transition: all ease-in-out 0.3s
             overflow: hidden
 
             img
-                
+
                 width: 100%
                 transition: all ease-in-out 0.3s
 
@@ -418,6 +483,315 @@ body
                     margin: 0
                     font-style: italic
 
+    .portfolio-footer
+        margin-top: 120px
+        .bg-img
+            background: url("/assets/img/counts-img.jpg") center center no-repeat !important
+            background-size: cover !important
+            min-height: 400px
+        .right
+            h3
+                font-size: 2.125rem
+                font-family: 'Raleway', sans-serif
+                font-weight: 700
+            .row
+                span
+                    font-size: 36px
+                    font-weight: 700
+                p
+                    padding: 15px 0 0 0
+                    font-family: "Raleway", sans-serif
+                    font-size: 14px
+                    color: #3b3b3b
+                i
+                    font-size: 2.45em
+                    color: #fcbd29
+
+    .portfolio-slider
+        margin-top: 80px
+        background: linear-gradient(rgb(0, 0, 0,0.6),rgb(0, 0, 0,0.6)) ,url("/assets/img/testimonials-bg.jpg") center/cover no-repeat
+        height: 440px
+        .container
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+    .swiper
+        margin-top: 60px
+        min-height: 280px
+
+        .swiper-pagination
+            bottom: 0px !important
+            display: inline-block
+            margin-top: 10px !important
+
+        .swiper-pagination-bullet
+            width: 10px !important
+            height: 10px !important
+        .swiper-pagination-bullet-active
+            background-color: #ffbb38 !important
+
+    .user-wrappers
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        img
+            width: 100px
+            height: 100px
+            border-radius: 50%
+            border: 6px solid rgba(255, 255, 255, 0.15)
+        .name
+            font-size: 20px
+            font-weight: bold
+            margin: 10px 0 5px 0
+            color: #fff
+            font-family: 'Raleway', sans-serif
+        .job
+            font-size: 14px
+            font-weight: 400 !important
+            color: #ddd
+
+    .swiper-slide
+        flex-direction: column !important
+        p
+            width: 80%
+            text-align: center
+            font-style: italic
+            margin: 0 auto 15px auto
+            color: #eee
+
+        i
+            color: #eee
+            font-size: 24px
+            margin-right: 5px
+            opacity: 0.5
+        .botm
+            position: relative
+            margin-left: 5px
+            top: 10px
+
+.section-6
+    margin-top: 3.75rem
+
+    .box
+        position: relative !important
+        &:hover
+            .member-info-social-card
+                bottom: 160px
+                opacity: 1
+
+    .content
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)
+        border-radius: 10px
+
+    #team-img
+        width: 100%
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+
+    .memmber-box
+        padding: 25px 15px
+        .name
+            font-size: 1.125rem
+            font-family: 'Raleway', sans-serif
+            color: #151515
+            font-weight: 700
+            margin-bottom: 5px
+        .job
+            font-size: 13px
+            font-weight: 400
+            color: #aaaaaa
+
+    .member-info-social-card
+        position: absolute
+        bottom: 180px
+        // bottom: 190px
+        left: 0
+        right: 0
+
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 10px
+        transition: 300ms cubic-bezier(0.61, 1, 0.88, 1) 0s
+        opacity: 0
+
+        i
+            width: 36px
+            height: 36px
+            background-color: #dbd9d9
+            border-radius: 5px
+            display: flex
+            align-items: center
+            justify-content: center
+            font-size: 24px
+            cursor: pointer
+            transition: 0.2s
+            &:hover
+                background-color: #fcbd29
+
+.section-7
+    margin-top: 60px
+
+    #map
+        width: 100%
+        height: 270px
+
+    .info-card
+        display: flex
+        gap: 15px
+        i
+            height: 50px
+            width: 50px
+            border-radius: 6px
+            background-color: #ffbb38
+            display: flex
+            align-items: center
+            justify-content: center
+            font-size: 25px
+
+        .text-areas
+            h4
+                color: #151515
+                text-align: left
+                font-family: 'Raleway',sans-serif
+                margin: 0
+
+            p
+                color: #484848
+                font-size: .875rem
+
+    input
+        width: 100%
+        padding: .375rem .75rem
+        outline: none
+        border: 1px solid #dee2e6
+        transition: 0.3s
+        &:focus
+            border-color: #ffbb38
+    textarea
+        width: 100%
+        outline: none
+        padding-left: 10px
+        border: 1px solid #dee2e6
+        &:focus
+            border-color: #ffbb38
+    .send-btn
+        width: max-content
+        background: #ffc451
+        border: 0
+        padding: 10px 24px
+        color: #151515
+        transition: 0.4s
+        border-radius: 4px
+        margin: auto
+
+        &:hover
+            background: #ffcd6b
+
+// ----------------------------Footer
+footer
+    margin-top: 60px
+    font-family: 'Raleway' ,sans-serif
+
+.footer-header
+    background: #151515
+    padding: 60px 0 30px 0
+    p
+        font-size: 14px
+        color: #fff
+
+    .soscial-wrapper
+        display: flex
+        align-items: center
+        justify-content: left
+        gap: 8px
+        margin-bottom: 30px
+        i
+            height: 35px
+            width: 35px
+            border-radius: 3px
+            background-color: #292929
+            color: #fff
+            display: flex
+            align-items: center
+            justify-content: center
+            font-size: 14px
+            cursor: pointer
+            transition: 0.3s
+            &:hover
+                background-color: #ffc451
+                color: #000
+
+    h4
+        font-size: 16px
+        font-weight: 600
+        color: #fff
+        position: relative
+        padding-bottom: 12px
+
+    ul
+        padding: 0
+        padding-left: 12px
+    li
+        margin-bottom: 14px
+        a
+            color: #fff
+            transition: 0.3s
+            display: inline-block
+            line-height: 1
+            font-size: .875rem
+            &:hover
+                color: #fcbd29
+
+            i
+                color: #fcbd29
+                font-size: 11px
+                padding-right: 5px
+
+form
+    margin-top: 30px
+    position: relative
+    input
+        width: 100%
+        border-radius: 3px
+        outline: none
+        border: none
+        padding: 8px 14px
+
+    .btns
+        position: absolute
+        top: 0
+        right: -2px
+        bottom: 0
+        border: 0
+        background: none
+        font-size: 16px
+        padding: 0 20px
+        background: #ffc451
+        color: #151515
+        transition: 0.3s
+        border-radius: 0 4px 4px 0
+
+        &:hover
+            background: #ffcd6b
+
+.footer-footer
+    background-color: #000000
+    color: #fff
+    .x
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 14px
+        gap: 5px
+        a
+            color: red
+            margin: 0
+            padding: 0
+// ----------------------------Footer
+
 // Meida querys
 @media (max-width:1200px)
     .card-wrapper
@@ -429,10 +803,47 @@ body
 
 @media (max-width:992px)
     // Mobile menu bars
+    .center
+        position: absolute
+        top: 0 !important
+        right: 0 !important
+        height: 600vh
+        max-width: 340px
+        width: 100%
+        padding-top: 60px
+        background: #272222
+
+        .menu-list
+            flex-direction: column !important
+
+        .drop-down-menu
+            position: relative !important
+            top: 10px !important
+            border: 2px solid black
+            background: #252323ee
+            width: 80%
+            height: 0
+            a
+                color: #fff !important
+
+            .ci2-drop-down
+                &:hover
+                    height: min-content !important
+                    .deep-drop-down-menu
+                        height: min-content !important
+
+        .deep-drop-down-menu
+            position: relative !important
+            left: 20px !important
+            margin-top: 10px
+            height: 0 !important
+            z-index: 1
+#x:hover
+    .drop-down-menu
+        height: max-content
+
     .bars
         display: block !important
-    .center
-        display: none
     // section 2 row 
     .section-2
         .rowm
@@ -459,6 +870,9 @@ body
                 .cols
                     margin: 0 !important
 
+    .portfolio-wrapper
+        columns: 2 !important
+
 @media (max-width:769px)
     .section-1
         padding-top: 110px
@@ -474,3 +888,12 @@ body
     .section-2
         .list
             margin-left: 0 !important
+    .portfolio-wrapper
+        columns: 1 !important
+
+// Background fixed
+@media (min-width: 1024px)
+    .portfolio-slider,
+    .section-1,
+    .section-footers
+        background-attachment: fixed !important
