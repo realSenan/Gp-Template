@@ -20,8 +20,8 @@ function callResize() {
   CalculateWidth();
 }
 
-CalculateWidth();
 callResize();
+CalculateWidth();
 
 function CalculateWidth() {
   if (widths <= 992) {
