@@ -31,6 +31,7 @@ body {
   font-size: 34px;
   color: #fff;
   font-family: "Raleway", sans-serif;
+  font-weight: 700;
 }
 .logo h1 a span {
   color: #fcbd29;
@@ -42,6 +43,7 @@ body {
   top: 0 !important;
   left: 0 !important;
   z-index: 99999999;
+  padding: 8px 0;
 }
 .header nav {
   display: flex;
@@ -79,9 +81,6 @@ body {
   font-size: 1.5rem;
   background-color: #fff;
   margin-bottom: 7px;
-}
-.header nav .center {
-  transform: translateX(0);
 }
 .header nav .center .menu-list {
   display: flex;
@@ -929,7 +928,7 @@ form .btns:hover {
     overflow-y: auto;
     z-index: 1;
     transition: 0.4s;
-    transform: translateX(100%);
+    transform: translateX(100%) !important;
   }
   .center .close {
     color: #fff;

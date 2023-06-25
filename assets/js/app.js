@@ -1,5 +1,5 @@
 // Scrolll
-window.addEventListener("scroll",ScrollSize );
+window.addEventListener("scroll", ScrollSize);
 
 function ScrollSize() {
   const toUP = this.document.querySelector(".up-to-top");
@@ -12,7 +12,7 @@ function ScrollSize() {
     toUP.style.display = "none";
   }
 }
-ScrollSize()
+ScrollSize();
 // Scrolll
 
 // responsive menu
@@ -35,11 +35,11 @@ CalculateWidth();
 function CalculateWidth() {
   if (widths <= 992) {
     hamburgerButton.addEventListener("click", (e) => {
-      menu.style.transform = "translateX(0) ";
+      menu.style.cssText = "transform : translateX(0) !important"
     });
 
     closeButton.addEventListener("click", (e) => {
-      menu.style.transform = "translateX(100%)";
+      menu.style.cssText = "transform : translateX(100%) !important"
     });
 
     document.addEventListener("click", function (event) {
@@ -47,11 +47,11 @@ function CalculateWidth() {
         !menu.contains(event.target) &&
         !hamburgerButton.contains(event.target)
       ) {
-        menu.style.transform = "translateX(100%)";
+        menu.style.cssText = "transform : translateX(100%) !important"
       }
     });
   } else {
-    menu.style.transform = "translateX(0)";
+    menu.style.cssText = "transform : translateX(0%) !important"
   }
 }
 // responsive menu
