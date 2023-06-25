@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap')
+@import '_animation'
 
 html
     scroll-behavior: smooth
@@ -106,11 +107,10 @@ body
     width: 200px
     background: #fff
     transition: 0.4s cubic-bezier(0.22, 1, 0.36, 1)
-    
+
     opacity: 0
     visibility: hidden
     // // display: none
-
 
 .drop-down-menu
     position: absolute
@@ -137,8 +137,8 @@ body
 
                 .deep-drop-down-menu
                     top: 50px
-                    opacity: 1 
-                    visibility: visible 
+                    opacity: 1
+                    visibility: visible
                     // display: block !important
             i
                 position: absolute
@@ -697,6 +697,28 @@ body
         &:hover
             background: #ffcd6b
 
+.up-to-top
+    a
+        width: 40px
+        height: 40px
+        border-radius: 20px
+        background: #ffc451
+        display: flex
+        align-items: center
+        justify-content: center
+        position: fixed
+        bottom: 60px
+        right: 70px
+        transition: 0.3s
+        z-index: 999
+        color: #000
+        -webkit-animation: slide-top 2s cubic-bezier(0.645, 0.045, 0.355, 1.000) backwards infinite
+        animation: slide-top 2s cubic-bezier(0.645, 0.045, 0.355, 1.000) backwards infinite
+
+        &:hover
+            background-color: #000
+            color: #ffc451
+
 // ----------------------------Footer
 footer
     margin-top: 60px
@@ -848,16 +870,16 @@ form
             border: 2px solid black
             background: #252323ee
             width: 80%
-            display: none 
+            display: none
             a
                 color: #fff !important
 
     ci2-drop-down
                 height: min-content
-            
+
     .deep-drop-down-menu
         display: none !important
-    
+
     #l.activex
         .deep-drop-down-menu
             position: relative
@@ -879,7 +901,7 @@ form
 
     .drop-down-menu
         display: none
-        
+
     #x.active
         .drop-down-menu
             position: relative
