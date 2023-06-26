@@ -136,3 +136,20 @@ buttons.forEach((button) => {
 
 
 // Menu navbar active
+
+const menuActive = document.querySelectorAll(".menu-list li a")
+
+menuActive.forEach(item => {
+  item.addEventListener("click",(e)=>{
+    if(!e.target.classList.contains("active"))
+    menuActive.forEach(btn =>{
+      if(btn.classList.contains("active")){
+        btn.classList.remove('active')
+      }
+    })
+
+    item.classList.add("active")
+    console.log(item);
+  })
+  
+})

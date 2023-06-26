@@ -19,19 +19,17 @@ html {
 }
 
 body {
-  overflow-y: auto !important;
   overflow-x: hidden !important;
   color: #444444;
   font-family: "Open Sans", sans-serif;
 }
 
-section {
+* section {
   overflow: hidden !important;
 }
 
 .container {
   padding-right: 20px !important;
-  overflow-x: hidden !important;
 }
 
 .logo h1 a {
