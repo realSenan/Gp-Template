@@ -84,8 +84,10 @@ body {
 }
 .header nav .center .menu-list {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 28px;
+  margin: 0 !important;
 }
 .header nav .center .menu-list a, .header nav .center .menu-list span {
   display: block;
@@ -765,8 +767,8 @@ body {
 }
 
 .up-to-top a {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 20px;
   background: #ffc451;
   display: flex;
@@ -914,6 +916,9 @@ form .btns:hover {
   }
 }
 @media (max-width: 992px) {
+  .up-to-top a {
+    right: 20px !important;
+  }
   #cl {
     color: #fff !important;
   }
@@ -946,6 +951,7 @@ form .btns:hover {
   .center .drop-down-menu {
     position: relative !important;
     top: 10px !important;
+    left: 0 !important;
     border: 2px solid black;
     background: rgba(37, 35, 35, 0.9333333333);
     width: 80%;

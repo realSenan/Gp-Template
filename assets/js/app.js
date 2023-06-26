@@ -33,26 +33,36 @@ callResize();
 CalculateWidth();
 
 function CalculateWidth() {
-  if (widths <= 992) {
-    hamburgerButton.addEventListener("click", (e) => {
-      menu.style.cssText = "transform : translateX(0) !important"
-    });
+  function OpenMenu() {
+    menu.style.cssText = "transform : translateX(0) !important";
+  }
+  function CloseMenu() {
+    menu.style.cssText = "transform : translateX(100%) !important";
+  }
 
-    closeButton.addEventListener("click", (e) => {
-      menu.style.cssText = "transform : translateX(100%) !important"
-    });
+  if (widths <= 992) {
+    hamburgerButton.addEventListener("click", OpenMenu);
+
+    closeButton.addEventListener("click", CloseMenu);
 
     document.addEventListener("click", function (event) {
       if (
         !menu.contains(event.target) &&
         !hamburgerButton.contains(event.target)
       ) {
-        menu.style.cssText = "transform : translateX(100%) !important"
+        CloseMenu();
       }
     });
   } else {
-    menu.style.cssText = "transform : translateX(0%) !important"
+    OpenMenu();
   }
+  document.addEventListener("touchmove", (e) => {
+    const isInsideMenu = menu.contains(e.target);
+    if (!isInsideMenu) {
+      CloseMenu();
+    }
+  });
+  
 }
 // responsive menu
 
