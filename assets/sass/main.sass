@@ -2,21 +2,24 @@
 @import '_animation'
 
 html
-    scroll-behavior: smooth
+    overflow-x:  hidden !important
+    scroll-behavior: smooth !important
+
+body
+    overflow-y: auto !important
     overflow-x: hidden !important
+    color: #444444
+    font-family: "Open Sans", sans-serif
+
+section 
+    overflow: hidden !important
 
 .container
     padding-right: 20px !important
     overflow-x: hidden !important
 
-body
-    font-family: "Open Sans", sans-serif
-    // font-family: 'Raleway', sans-serif
-    color: #444444
-    overflow-x: hidden !important
-
-section,footer
-    overflow-x: hidden !important
+// body
+//     // font-family: 'Raleway', sans-serif
 
 .logo
     h1
@@ -29,11 +32,6 @@ section,footer
                 color: #fcbd29
 
 .header
-    width: 100%
-    position: fixed !important
-    top: 0 !important
-    left: 0 !important
-    z-index: 99999999
     padding: 8px 0
     nav
         display: flex
