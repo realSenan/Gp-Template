@@ -38,6 +38,9 @@ function CalculateWidth() {
   }
   function CloseMenu() {
     menu.style.cssText = "transform : translateX(100%) !important";
+    if ((menu.style.cssText = "transform : translateX(100%)")) {
+      dropWRAPPER.classList.remove("active");
+    }
   }
 
   if (widths <= 992) {
@@ -62,7 +65,6 @@ function CalculateWidth() {
       CloseMenu();
     }
   });
-  
 }
 // responsive menu
 
