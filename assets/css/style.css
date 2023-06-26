@@ -84,7 +84,6 @@ body {
 }
 .header nav .center .menu-list {
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: 28px;
   margin: 0 !important;
