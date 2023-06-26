@@ -3,15 +3,20 @@
 
 html
     scroll-behavior: smooth
+    overflow-x: hidden !important
 
 .container
     padding-right: 20px !important
+    overflow-x: hidden !important
 
 body
     font-family: "Open Sans", sans-serif
     // font-family: 'Raleway', sans-serif
     color: #444444
-    overflow-x: hidden
+    overflow-x: hidden !important
+
+section,footer
+    overflow-x: hidden !important
 
 .logo
     h1
@@ -25,7 +30,7 @@ body
 
 .header
     width: 100%
-    position: fixed
+    position: fixed !important
     top: 0 !important
     left: 0 !important
     z-index: 99999999
@@ -72,7 +77,7 @@ body
                 justify-content: center
                 gap: 28px
                 margin: 0 !important
-                
+
                 a,span
                     display: block
                     color: #fff
@@ -882,7 +887,6 @@ form
             background: #252323ee
             width: 80%
             display: none
-
 
             a
                 color: #fff !important

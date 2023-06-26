@@ -44,6 +44,7 @@ function CalculateWidth() {
   }
 
   if (widths <= 992) {
+
     hamburgerButton.addEventListener("click", OpenMenu);
 
     closeButton.addEventListener("click", CloseMenu);
@@ -58,6 +59,7 @@ function CalculateWidth() {
     });
   } else {
     OpenMenu();
+
   }
   document.addEventListener("touchmove", (e) => {
     const isInsideMenu = menu.contains(e.target);
@@ -131,3 +133,6 @@ buttons.forEach((button) => {
     });
   });
 });
+
+
+// Menu navbar active
