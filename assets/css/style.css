@@ -27,7 +27,7 @@ body {
 }
 
 main {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .container {
@@ -45,6 +45,7 @@ main {
 }
 
 .header {
+  transition: 1s background;
   padding: 8px 0;
 }
 .header nav {
@@ -931,6 +932,7 @@ form .btns:hover {
     width: 245px;
     padding-top: 40px;
     background: #272222;
+    overflow-y: auto;
     z-index: 1;
     transition: 0.4s;
     transform: translateX(100%) !important;

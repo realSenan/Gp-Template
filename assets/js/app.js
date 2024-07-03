@@ -2,14 +2,11 @@
 window.addEventListener("scroll", ScrollSize);
 
 function ScrollSize() {
-  const toUP = this.document.querySelector(".up-to-top");
   const header = document.querySelector(".header");
-  if (this.document.documentElement.scrollTop > 70) {
-    toUP.style.display = "flex";
+  if (window.scrollY >= 100) {
     header.style.backgroundColor = "#020303d3";
   } else {
     header.style.backgroundColor = "transparent";
-    toUP.style.display = "none";
   }
 }
 ScrollSize();
