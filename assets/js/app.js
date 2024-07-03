@@ -1,10 +1,10 @@
-// Scrolll
+// Scrolll Nav bar
 window.addEventListener("scroll", ScrollSize);
 
 function ScrollSize() {
   const toUP = this.document.querySelector(".up-to-top");
   const header = document.querySelector(".header");
-  if (this.document.documentElement.scrollTop > 100) {
+  if (this.document.documentElement.scrollTop > 70) {
     toUP.style.display = "flex";
     header.style.backgroundColor = "#020303d3";
   } else {
@@ -35,12 +35,12 @@ CalculateWidth();
 function CalculateWidth() {
   function OpenMenu() {
     menu.style.cssText = "transform : translateX(0) !important";
+    menu.classList.add("active");
   }
   function CloseMenu() {
     menu.style.cssText = "transform : translateX(100%) !important";
-    if ((menu.style.cssText = "transform : translateX(100%)")) {
-      dropWRAPPER.classList.remove("active");
-    }
+    dropWRAPPER.classList.remove("active");
+    menu.classList.remove("active");
   }
 
   if (widths <= 992) {
@@ -49,16 +49,12 @@ function CalculateWidth() {
     closeButton.addEventListener("click", CloseMenu);
 
     document.addEventListener("click", function (event) {
-      if (
-        !menu.contains(event.target) &&
-        !hamburgerButton.contains(event.target)
-      ) {
+      if (!menu.contains(event.target) && !hamburgerButton.contains(event.target)) {
         CloseMenu();
       }
     });
-  } else {
-    OpenMenu();
   }
+
   document.addEventListener("touchmove", (e) => {
     const isInsideMenu = menu.contains(e.target);
     if (!isInsideMenu) {
@@ -71,29 +67,23 @@ function CalculateWidth() {
 // Menu bar active
 const dropWRAPPER = document.querySelector("#x");
 const deepWRAPPER = document.querySelector("#l");
+const deepDropDownMenu = document.querySelector(".deep-drop-down-menu");
 
 dropWRAPPER.addEventListener("click", (e) => {
-  counter++;
-
   if (!e.target.classList.contains("active")) {
-    dropWRAPPER.classList.add("active");
-  }
-  if (counter == 4) {
-    dropWRAPPER.classList.remove("active");
-    CheckActive();
-    counter = 0;
+    dropWRAPPER.classList.toggle("active");
   }
 });
 
-deepWRAPPER.addEventListener("click", () => {
-  deepWRAPPER.classList.add("activex");
+deepWRAPPER.addEventListener("click", (e) => {
+  e.stopPropagation();
+  deepWRAPPER.classList.toggle("activex");
 });
 
-function CheckActive() {
-  if (!dropWRAPPER.classList.contains("active")) {
-    deepWRAPPER.classList.remove("activex");
-  }
-}
+deepDropDownMenu.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
 // Menu bar active
 
 const portfolioItem = document.querySelectorAll(".portfolio-item");
@@ -115,9 +105,7 @@ buttons.forEach((button) => {
     button.classList.add("active");
 
     portfolioItem.forEach((portfolio) => {
-      const portfolioContent = portfolio
-        .querySelector("p")
-        .textContent.toLowerCase();
+      const portfolioContent = portfolio.querySelector("p").textContent.toLowerCase();
 
       if (buttonContent == "all") {
         portfolio.style.display = "flex";

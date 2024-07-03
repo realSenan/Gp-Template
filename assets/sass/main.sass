@@ -2,23 +2,15 @@
 @import '_animation'
 
 html
-    overflow-x: hidden !important
+    overflow-x: hidden
     scroll-behavior: smooth !important
 
 body
-    overflow-x: hidden !important
     color: #444444
     font-family: "Open Sans", sans-serif
 
-*
-    section
-        overflow: hidden !important
-
 .container
     padding-right: 20px !important
-
-// body
-//     // font-family: 'Raleway', sans-serif
 
 .logo
     h1
@@ -65,9 +57,6 @@ body
                     background-color: #fff
                     margin-bottom: 7px
         .center
-            // display: flex
-            // justify-content: center
-            // transform: translateX(0) !important
 
             .menu-list
                 display: flex
@@ -97,7 +86,7 @@ body
     &:hover
         color: #ffc451 !important
 
-        #colr   
+        #colr
             color: #ffc451 !important
 
         .drop-down-menu
@@ -130,7 +119,6 @@ body
     transition: 0.4s cubic-bezier(0.22, 1, 0.36, 1)
     opacity: 0
     visibility: hidden
-   
 
     li
         a,span
@@ -440,7 +428,6 @@ body
             overflow: hidden
 
             img
-
                 width: 100%
                 transition: all ease-in-out 0.3s
 
@@ -859,10 +846,20 @@ form
         width: 245px
         padding-top: 40px
         background: #272222
-        overflow-y: auto
         z-index: 1
         transition: 0.4s
         transform: translateX(100%) !important
+
+        &.active
+            &::before
+                content: ''
+                position: fixed
+                top: 0
+                left: -100vw
+                width: 100vw
+                height: 100vh
+                background: #00000069
+                z-index: 9999
 
         .close
             color: #fff
@@ -885,6 +882,8 @@ form
             background: #252323ee
             width: 80%
             display: none
+            visibility: visible !important
+            opacity: 1 !important
 
             a
                 color: #fff !important

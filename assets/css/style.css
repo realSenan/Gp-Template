@@ -1,7 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap"); /* ---------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap");
 @-webkit-keyframes slide-top {
-  bottom: 50px;
-  bottom: 60px;
+  0% {
+    bottom: 50px;
+  }
+  100% {
+    bottom: 60px;
+  }
 }
 @keyframes slide-top {
   0% {
@@ -14,18 +18,13 @@
   }
 }
 html {
-  overflow-x: hidden !important;
+  overflow-x: hidden;
   scroll-behavior: smooth !important;
 }
 
 body {
-  overflow-x: hidden !important;
   color: #444444;
   font-family: "Open Sans", sans-serif;
-}
-
-* section {
-  overflow: hidden !important;
 }
 
 .container {
@@ -929,10 +928,19 @@ form .btns:hover {
     width: 245px;
     padding-top: 40px;
     background: #272222;
-    overflow-y: auto;
     z-index: 1;
     transition: 0.4s;
     transform: translateX(100%) !important;
+  }
+  .center.active::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4117647059);
+    z-index: 9999;
   }
   .center .close {
     color: #fff;
@@ -955,6 +963,8 @@ form .btns:hover {
     background: rgba(37, 35, 35, 0.9333333333);
     width: 80%;
     display: none;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
   .center .drop-down-menu a {
     color: #fff !important;
